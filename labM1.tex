@@ -3,52 +3,62 @@
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
-
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
 \begin{document}
 
 \section{Cel ćwiczenia}
-Celem ćwiczenia jest wyznaczenie gęstości wybranych cieczy  przy użyciu wagi Mohra oraz piknometru.
+Celem ćwiczenia było wyznaczenie gęstości wybranych cieczy  przy użyciu wagi Mohra oraz piknometru dla denaturatu i zasolonej wody.  W obu pomiarach jako gęstość wzorcową przyjęto gęstość wody destylowanej $\rho = 1000 \frac{kg}{m^3}$.
 
 \section{Opracowanie wyników dla wagi Mohra}
 \subsection{pomierzone dane}
 \begin{center}
 \begin{tabular}{ c | c | c | c }
 badana ciecz & p & q & r \\
+\hline
  woda destylowana & 1; 8 & 9  &  9  \\ 
  denaturat  & 1; 7 & 3 & - \\  
  słona woda & 2; 9 & 7 & -    
+
 \end{tabular}
 \end{center}
-
+$p$ - numer konika,  na którym zawieszono masę $m$ (jeśli użyto kilku mas, to numery podane po średniku)\\
+$q$ - numer konika,  na którym zawieszono masę $\frac{m}{10}$ \\
+$r$ - numer konika, na którym zawieszono masę $\frac{m}{100}$
 \subsection{obliczenie gęstości}
-korzystamy ze wzoru 
-$\rho = \rho_w \frac{p+\frac{q}{10} + \frac{r}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}} $
-\\ ciecz wzorcowa = woda destylowana ($\rho_w = 1000 \frac{kg}{m^3}$)
+korzystamy ze wzoru\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieM1.pdf} (M1.4)}
+\begin{gather*}
+	\rho = \rho_w \frac{p+\frac{q}{10} + \frac{r}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}}
+\end{gather*} 
+\\ $\rho_w = 1000 \frac{kg}{m^3}$ (ciecz wzorcowa - woda destylowana)
 \\ $p, q, r$ - pomierzone odległości koników od punktu podparcia dźwigni dla badanej cieczy \\
 $p_w, q_w,  r_w$ - pomierzone odległości koników od punktu podparcia dźwigni dla cieczy wzorcowej (woda destylowana)
 
 \begin{center}
 \begin{tabular}{ c | c }
 badana ciecz & pomierzona gęstość $\rho [\frac{kg}{m^3}]$\\
+\hline
  denaturat  & 831, 831\\  
  słona woda & 1173,173
 \end{tabular}
 \end{center}
 
 \subsection{rachunek niepewności}
-do wyliczenia niepewności korzystamy ze wzoru $|\frac{\Delta \rho}{\rho}| = |\frac{\frac{\Delta r_w}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}}| + |\frac{\frac{\Delta q}{10}}{p+\frac{q}{10} + \frac{r}{100}}|$ \\
-$\Delta r_w = \Delta q = 1/2$
+do wyliczenia niepewności korzystamy ze wzoru \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cw_26.pdf} (26.9)}
+\begin{gather*}
+	|\frac{\Delta \rho}{\rho}| = |\frac{\frac{\Delta r_w}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}}| + |\frac{\frac{\Delta q}{10}}{p+\frac{q}{10} + \frac{r}{100}}|
+\end{gather*}
+gdzie $\Delta r_w = \Delta q = 1/2$ (używamy $\Delta q$ - w pomiarach nie używaliśmy masy $\frac{m}{100}$)
 
 \begin{center}
 \begin{tabular}{ c | c }
 badana ciecz & niepewność |$\frac{\Delta \rho}{\rho}$| [\%] \\
+\hline
 denaturat  & 0,60241\\  
 słona woda & 0,47774
 \end{tabular}
 \end{center}
-
-
-
 
 \section{Opracowanie wyników dla Piknometru}
 
@@ -56,6 +66,7 @@ słona woda & 0,47774
 \begin{center}
 \begin{tabular}{ c | c }
 pomiar & pomierzona masa [g]  \\
+\hline
 sam piknometr &  26,972  \\ 
 piknometr z wodą destylowaną& 78,325  \\  
 piknometr z denaturatem & 69,541 \\
@@ -65,7 +76,10 @@ piknometr z wodą morską & 86,460
 
 \subsection{obliczenie gęstości}
 
-korzystamy ze wzoru $\rho = \rho_w \frac{m_3 - m_1}{m_2 - m_1}$ \\
+korzystamy ze wzoru \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieM1.pdf} (M1.7)} 
+\begin{gather*}
+	\rho = \rho_w \frac{m_3 - m_1}{m_2 - m_1}
+\end{gather*}
 $m_1$ - masa samego piknometru \\
 $m_2$ - masa piknometru z cieczą wzorcową (woda destylowana) \\
 $m_3$ - masa piknometru z badaną cieczą \\
@@ -74,13 +88,32 @@ $\rho_w$ - gęstość wzorcowa (wody destylowanej, tak jak poprzednio)
 \begin{center}
 \begin{tabular}{ c | c }
 badana ciecz & pomierzona gęstość $\rho [\frac{kg}{m^3}]$\\
+\hline
  denaturat  & 828 9486 \\  
  słona woda & 1158,41334
 \end{tabular}
 \end{center}
 \subsection{rachunek niepewności}
-do wyliczenia niepewności korzystamy ze wzoru \\
-
+do wyliczenia niepewności korzystamy z oszcowania \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cw_26.pdf} (26.11)} \\
+\begin{gather*}
+	|\frac{\Delta\rho}{\rho}| \approx 3|\frac{\Delta m}{m_2 - m_1}|
+\end{gather*}
+gdzie $\Delta m = 0,001$
+czyli |$\frac{\Delta\rho}{\rho}|  \approx 0,00584191770\%$
+\\ \\ \\
 \section{Wnioski}
+
+\begin{center}
+\begin{tabular}{ c | c | c | c }
+rodzaj cieczy & waga Mohra  $\rho [\frac{kg}{m^3}]$ & piknometr $\rho [\frac{kg}{m^3}]$ & tablice $\rho [\frac{kg}{m^3}] $ \\
+
+\hline
+ denaturat  & 831, 831 &  828 9486 & 800\\  
+ słona woda & 1173,173 &1158,41334 & 1030
+\end{tabular}
+\end{center}
+
+Mimo, że występuje odstępstwo od wskazań z tablic\footnote{\url{http://fizyka.edu.pl/gestosc-substancji/}}, wyniki pomiarów piknometrem i wagą Mohra są do siebie zbliżone.  Sugerowałoby to,  że stężenie soli w zasolonej wodzie różni się od tego w wodzie morskiej a denaturat mógł być trochę rozcieńczony wodą po wielokrotnym użytku (stąd w obu sytuacjach wzrost gęstości w stosunku do tej z tablic).  Różnice między wartościami spowodowane są niedokładnością techniki wykonywania pomiarów \\ np.  niewystarczające wysuszenie środka piknometru i nagrzanie piknometru suszarką co spowodowało podgrzanie cieczy w rezultacie zmniejszając wyznaczoną gęstość.  W przypadku wagi Mohra na dokładność mogła wpłynąć także trudność w określeniu położenia równowagi, oscylacje ramienia dźwigni oraz przyjęte założenie, że nurek jest nieważki.
+
 
 \end{document}
