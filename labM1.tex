@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\section{Cel ćwiczenia}
+Celem ćwiczenia jest wyznaczenie gęstości wybranych cieczy  przy użyciu wagi Mohra oraz piknometru.
+
+\section{Opracowanie wyników dla wagi Mohra}
+\subsection{pomierzone dane}
+\begin{center}
+\begin{tabular}{ c | c | c | c }
+badana ciecz & p & q & r \\
+ woda destylowana & 1; 8 & 9  &  9  \\ 
+ denaturat  & 1; 7 & 3 & - \\  
+ słona woda & 2; 9 & 7 & -    
+\end{tabular}
+\end{center}
+
+\subsection{obliczenie gęstości}
+korzystamy ze wzoru 
+$\rho = \rho_w \frac{p+\frac{q}{10} + \frac{r}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}} $
+\\ ciecz wzorcowa = woda destylowana ($\rho_w = 1000 \frac{kg}{m^3}$)
+\\ $p, q, r$ - pomierzone odległości koników od punktu podparcia dźwigni dla badanej cieczy \\
+$p_w, q_w,  r_w$ - pomierzone odległości koników od punktu podparcia dźwigni dla cieczy wzorcowej (woda destylowana)
+
+\begin{center}
+\begin{tabular}{ c | c }
+badana ciecz & pomierzona gęstość $\rho [\frac{kg}{m^3}]$\\
+ denaturat  & 831, 831\\  
+ słona woda & 1173,173
+\end{tabular}
+\end{center}
+
+\subsection{rachunek niepewności}
+do wyliczenia niepewności korzystamy ze wzoru $|\frac{\Delta \rho}{\rho}| = |\frac{\frac{\Delta r_w}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}}| + |\frac{\frac{\Delta q}{10}}{p+\frac{q}{10} + \frac{r}{100}}|$ \\
+$\Delta r_w = \Delta q = 1/2$
+
+\begin{center}
+\begin{tabular}{ c | c }
+badana ciecz & niepewność |$\frac{\Delta \rho}{\rho}$| [\%] \\
+denaturat  & 0,60241\\  
+słona woda & 0,47774
+\end{tabular}
+\end{center}
+
+
+
+
+\section{Opracowanie wyników dla Piknometru}
+
+\subsection{pomierzone dane}
+\begin{center}
+\begin{tabular}{ c | c }
+pomiar & pomierzona masa [g]  \\
+sam piknometr &  26,972  \\ 
+piknometr z wodą destylowaną& 78,325  \\  
+piknometr z denaturatem & 69,541 \\
+piknometr z wodą morską & 86,460    
+\end{tabular}
+\end{center}
+
+\subsection{obliczenie gęstości}
+
+korzystamy ze wzoru $\rho = \rho_w \frac{m_3 - m_1}{m_2 - m_1}$ \\
+$m_1$ - masa samego piknometru \\
+$m_2$ - masa piknometru z cieczą wzorcową (woda destylowana) \\
+$m_3$ - masa piknometru z badaną cieczą \\
+$\rho_w$ - gęstość wzorcowa (wody destylowanej, tak jak poprzednio)
+
+\begin{center}
+\begin{tabular}{ c | c }
+badana ciecz & pomierzona gęstość $\rho [\frac{kg}{m^3}]$\\
+ denaturat  & 828 9486 \\  
+ słona woda & 1158,41334
+\end{tabular}
+\end{center}
+\subsection{rachunek niepewności}
+do wyliczenia niepewności korzystamy ze wzoru \\
+
+\section{Wnioski}
+
+\end{document}
