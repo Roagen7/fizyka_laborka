@@ -1,6 +1,10 @@
+## latex stuff
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
 *.out
+*.synctex.gz
+
+## mac stuff
 .DS_Store
