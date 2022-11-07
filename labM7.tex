@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
+\begin{document}
+
+\section{Cel ćwiczenia}
+Celem ćwiczenia było wyznaczenie współczynnika sprężystości sprężyny przy użyciu metody statycznej i dynamicznej.  Ćwiczenie obejmowało również wyznaczenie współczynnika sprężystości dla układu sprężyn połączonych równolegle i szeregowo.
+
+\section{Opracowanie wyników}
+\subsection{pomierzone dane}
+\begin{center}
+\begin{tabular}{ c | c | c | c }
+badana ciecz & p & q & r \\
+\hline
+ woda destylowana & 1; 8 & 9  &  9  \\ 
+ denaturat  & 1; 7 & 3 & - \\  
+ słona woda & 2; 9 & 7 & -    
+
+\end{tabular}
+\end{center}
+$p$ - numer konika,  na którym zawieszono masę $m$ (jeśli użyto kilku mas, to numery podane po średniku)\\
+$q$ - numer konika,  na którym zawieszono masę $\frac{m}{10}$ \\
+$r$ - numer konika, na którym zawieszono masę $\frac{m}{100}$
+\subsection{obliczenie gęstości}
+korzystamy ze wzoru\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieM1.pdf} (M1.4)}
+\begin{gather*}
+	\rho = \rho_w \frac{p+\frac{q}{10} + \frac{r}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}}
+\end{gather*} 
+
+\subsection{rachunek niepewności}
+do wyliczenia niepewności korzystamy ze wzoru \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cw_26.pdf} (26.9)}
+
+\section{Wnioski}
+
+\begin{center}
+\begin{tabular}{ c | c | c | c }
+rodzaj cieczy & waga Mohra  $\rho [\frac{kg}{m^3}]$ & piknometr $\rho [\frac{kg}{m^3}]$ & tablice $\rho [\frac{kg}{m^3}] $ \\
+
+\hline
+ denaturat  & 831,83 $\pm$ 5,82 &  828,95 $\pm$  0,05& 800\\  
+ słona woda & 1173,17 $\pm$ 5,87&1158,41 $\pm$ 0,07 & 1030
+\end{tabular}
+\end{center}
+
+Mimo, że występuje odstępstwo od wskazań z tablic\footnote{\url{http://fizyka.edu.pl/gestosc-substancji/}}, wyniki pomiarów piknometrem i wagą Mohra są do siebie zbliżone.  Sugerowałoby to,  że stężenie soli w zasolonej wodzie różni się od tego w wodzie morskiej a denaturat mógł być trochę rozcieńczony wodą po wielokrotnym użytku (stąd w obu sytuacjach wzrost gęstości w stosunku do tej z tablic).  Różnice między wartościami spowodowane są niedokładnością techniki wykonywania pomiarów \\ np.  niewystarczające wysuszenie środka piknometru i nagrzanie piknometru suszarką co spowodowało podgrzanie cieczy w rezultacie zmniejszając wyznaczoną gęstość.  W przypadku wagi Mohra na dokładność mogła wpłynąć także trudność w określeniu położenia równowagi, oscylacje ramienia dźwigni oraz przyjęte założenie, że nurek jest nieważki.
+
+
+\end{document}
