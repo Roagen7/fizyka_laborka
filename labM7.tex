@@ -94,13 +94,18 @@ $R$ - promień sprężyny \\
 $N$ - liczba zwojów sprężyny
 
 \subsection{obliczenie modułu sztywności}
-korzystamy ze wzoru\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieM1.pdf} (M1.4)}
+korzystamy ze wzoru\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/Cwicz63_02.pdf} (63.19)}
 \begin{gather*}
-	\rho = \rho_w \frac{p+\frac{q}{10} + \frac{r}{100}}{p_w+\frac{q_w}{10} + \frac{r_w}{100}}
+	G =  \frac{4NR^3k}{r^4}
 \end{gather*} 
+otrzymujemy $G = 3.$
 
 \subsection{rachunek niepewności}
-do wyliczenia niepewności korzystamy ze wzoru \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cw_26.pdf} (26.9)}
+do wyliczenia niepewności korzystamy ze wzoru \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/Cwicz63_02.pdf} (63.20)}
+\begin{gather*}
+	|\Delta G| = G*(|\frac{\Delta N}{N}| + |\frac{3\Delta R}{R}| + |\frac{4\Delta r}{r}| + |\frac{\Delta k}{k}|  )
+\end{gather*}
+gdzie przyjmujemy $\Delta R = \Delta r = 0.5mm$, $\Delta N = 5$
 
 \section{Układ sprężyn połączony równolegle}
 \subsection{pomierzone dane}
@@ -162,7 +167,8 @@ do wyliczenia niepewności korzystamy ze wzoru \footnote{\url{https://pg.edu.pl/
 
 \begin{center}
 \begin{tabular}{ c | c }
-zadanie & współczynnik spreżystości  \\
+zadanie & współczynnik spreżystości [$\frac{N}{m}$]  \\
+
 
 \hline
  metoda statyczna  & 831,83\\  
@@ -170,6 +176,10 @@ zadanie & współczynnik spreżystości  \\
  układ połączony szeregowo & 123 \\
  układ połączony równolegle & 123 
 \end{tabular}
+\end{center}
+
+\begin{center}
+	moduł sztywności G = Pa
 \end{center}
 
 Podobieństwo pomiaru metodą statyczną i dynamiczną.
