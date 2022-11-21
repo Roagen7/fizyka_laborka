@@ -1,0 +1,111 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\graphicspath{ {./media/} }
+\begin{document}
+
+\section{Cel ćwiczenia}
+Celem cwiczenia jest pomiar oporu elektrycznego pojedynczych rezystorów
+oraz układu rezystorów połaczonych szeregowo i równolegle z wykorzystaniem
+mostka pradu stałego (mostek Wheatstone’a).
+
+\section{Badanie rezystancji pojedynczych rezystorów o nieznanej wartości}
+\subsection{pomierzone dane}
+\begin{center}
+\begin{tabular}{ c | c | c | c}
+Rezystor & $R_n$ [\si{\ohm}] & $l_1$ [mm] & $l_2$ [mm]\\
+\hline
+ 1    & 152 & 480 & 520\\ 
+ 2    & 620 & 506 & 494\\ 
+ 3  & 430 & 504 & 496\\ 
+ 4  & 2040 & 501 & 499\\
+ 5   & 3030 & 502 & 498\\
+ 6  & 13800 & 500 & 500\\
+ 
+\end{tabular}
+\end{center}
+$R_n$ - opór wzorcowy mostka\\ 
+$l_1$ - położenie ślizgacza na skali milimetrowej listwy\\
+
+\subsection{obliczenie rezystancji}
+korzystamy ze wzoru\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieE3.pdf} (E3.8)}
+\begin{gather*}
+	R_x = R_n\frac{l_1}{l_2}
+\end{gather*} 
+$R_x$ - opór badanego rezystora\\ 
+$R_n$ - opór wzorcowy mostka\\ 
+$l_1$ - położenie ślizgacza na skali milimetrowej listwy\\
+
+
+
+
+\section{Badanie rezystancji układów rezystorów połączonych szeregowo}
+\subsection{pomierzone dane}
+\begin{center}
+\begin{tabular}{ c |  c | c | c}
+Rezystor & $R_n$ [\si{\ohm}] & $l_1$ [mm] & $l_2$ [mm]\\
+\hline
+ 8 i 9 & 5000 & 508 & 492\\ 
+ 8 i 5 & 2720 & 500 & 500\\ 
+ 9 i 5 & 3780 & 500 & 500\\ 
+
+\end{tabular}
+\end{center}
+$R_n$ - opór wzorcowy mostka\\ 
+$l_1$ - położenie ślizgacza na skali milimetrowej listwy\\
+
+\subsection{obliczenie rezystancji}
+do obliczenia rezystancji korzystamy z tego samego wzoru co w pkt. 2.2\\
+otrzymujemy: \\
+
+
+\section{Badanie rezystancji układów rezystorów połączonych równolegle}
+\subsection{pomierzone dane}
+\begin{center}
+\begin{tabular}{ c |  c | c | c}
+Rezystor & $R_n$ [\si{\ohm}] & $l_1$ [mm] & $l_2$ [mm]\\
+\hline
+ 8 i 9 & 1260 & 499 & 501\\ 
+ 8 i 5 & 495 & 500 & 500\\ 
+ 9 i 5 & 540 & 500 & 500\\ 
+
+\end{tabular}
+\end{center}
+$R_n$ - opór wzorcowy mostka\\ 
+$l_1$ - położenie ślizgacza na skali milimetrowej listwy\\
+
+\section{Badanie drutów konstantanowych o różnej średnicy}
+\subsection{pomierzone dane}
+
+\begin{center}
+\begin{tabular}{ c |  c | c | c}
+d [mm] & $R_n$ [\si{\ohm}] & $l_1$ [mm] & $l_2$ [mm]\\
+\hline
+ 0,35 & 5 & 503 & 497\\ 
+ 0,50 & 2 & 544 & 456\\ 
+ 0,70 & 1 & 547 & 453\\ 
+ 1,00 & 1 & 365 & 635\\ 
+
+\end{tabular}
+\end{center}
+{d} - średnica drutu\\
+$R_n$ - opór wzorcowy mostka\\ 
+$l_1$ - położenie ślizgacza na skali milimetrowej listwy\\
+
+\subsection {Zależność R =$ f(\frac{1}{d^2})$}
+
+\subsection {obliczenie oporu właściwego konstantatu}
+
+\section{Wnioski}
+	
+
+
+
+\end{document}
