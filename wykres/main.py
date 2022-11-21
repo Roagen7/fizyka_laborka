@@ -6,6 +6,7 @@ import numpy as np
 
 from matplotlib.pyplot import plot, show, errorbar, savefig
 
+
 def stdev(a, x, y): #stdev = S_a
     if len(x) != len(y):
         raise Exception("Invalid size: len(x) != len(y)")
@@ -17,31 +18,15 @@ def stdev(a, x, y): #stdev = S_a
 
     return math.sqrt(n/(n-2) * numerator / denominator)
 
-def statyczne():
-    return [0.05, 0.1, 0.150, 0.200, 0.250], \
-           [0.088, 0.180, 0.271, 0.359, 0.449]
-def dynamiczne():
-    x = [0.05, 0.1, 0.150, 0.200, 0.250, 0.300, 0.350, 0.400, 0.450]
-    y = [5.18,
-8.95,
-10.66,
-11.65,
-13.14,
-14.49,
-15.56,
-16.42,
-17.39]
-    y = [(t / 20) * (t / 20) for t in y]
-    return x,y
 
 if __name__ == '__main__':
     matplotlib.use('MacOSX')
 
-    x, y = statyczne()
-    error = [0.002 for t in y]
+    error = [0.02, 0.01, 0.01, 0.01]
+    x = [1.0, 2.04, 4.0, 8.16]
+    y = [0.57, 1.21, 2.39, 5.06]
 
-    print(y)
-    coeff = np.polyfit(x,y,1) # linear regression
+    coeff = np.polyfit(x,y,1)
     dev = stdev(coeff[0], x, y)
 
     plot(x,y, 'yo', x, np.poly1d(coeff)(x),  c='0.88',markersize=0.01)
@@ -50,9 +35,8 @@ if __name__ == '__main__':
     for cap in caps:
         cap.set_markeredgewidth(1)
 
-    #plt.title('')
-    plt.ylabel('x[m]')
-    plt.xlabel('m [kg]')
+    plt.ylabel('Rx [Ω]')
+    plt.xlabel('d^(-2) [mm^-2]')
 
     print("a=", coeff)
     print("stdev=", dev)
