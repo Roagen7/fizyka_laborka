@@ -102,7 +102,7 @@ Rezystor & $R_x$ [\si{\ohm}]\\
  2    & 635,06 $\pm$ 2,53\\ 
  3  & 437,94 $\pm$ 1,75\\ 
  4  & 2048,18 $\pm$ 8,19\\
- 5   & 3054, 34$\pm$ 12,22\\
+ 5   & 3054, 34 $\pm$ 12,22\\
  6  & 13800,00 $\pm$ 55,20\\
 
 \end{tabular}
@@ -126,12 +126,12 @@ Rezystor & $R_n$ [\si{\ohm}] & $l_1$ [mm] & $l_2$ [mm]\\
 
 \subsection{Wyniki}
 \begin{center}
-\begin{tabular}{ c | c | c}
-Rezystor & $R_x$ [\si{\ohm}] & Z teorii\\
+\begin{tabular}{ c | c }
+Rezystor & $R_x$ [\si{\ohm}]\\
 \hline
- 2 i 4  & 2720,00 $\pm$ 10,88& 2683,24\\ 
- 2 i 5  & 3780, 00 $\pm$ 15,12 & 3689,40\\ 
- 4 i 5  & 5163,60 $\pm$ 20,66&  5103,51\\ 
+ 2 i 4  & 2720,00 $\pm$ 10,88\\ 
+ 2 i 5  & 3780, 00 $\pm$ 15,12\\ 
+ 4 i 5  & 5163,60 $\pm$ 20,66\\ 
 \end{tabular}
 \end{center}
 \section{Badanie rezystancji układów rezystorów połączonych równolegle}
@@ -149,12 +149,12 @@ Rezystor & $R_n$ [\si{\ohm}] & $l_1$ [mm] & $l_2$ [mm]\\
 
 \subsection{Wyniki}
 \begin{center}
-\begin{tabular}{ c | c | c}
-Rezystor & $R_x$ [\si{\ohm}] & Z teorii\\
+\begin{tabular}{ c | c }
+Rezystor & $R_x$ [\si{\ohm}]\\
 \hline
-2 i 4    & 495,00 $\pm$ 1,98 & 485,76\\ 
-2 i 5  & 540,00 $\pm$ 2,16 & 525,75\\ 
-4 i 5    & 1254,97 $\pm$ 5,02 &  1226,03\\ 
+2 i 4    & 495,00 $\pm$ 1,98\\ 
+2 i 5  & 540,00 $\pm$ 2,16\\ 
+4 i 5    & 1254,97 $\pm$ 5,02\\ 
 
 \end{tabular}
 \end{center}
@@ -245,9 +245,49 @@ if __name__ == "__main__":
 
 
 \section{Wnioski}
-Napisać, że szeregowo i równolegle zgadza się z teoretycznymi założeniami, napisać coś o tym, że
-czym bliżej środka jest ten ślizgacz tym dokładniej. Porównać ten opór właściwy konstantanu do jakiegoś z tablic.
 
+Wyniki pomiarów były dokładniejsze ze względu na poprawne równoważenie mostka w centralnej części struny \\
 
+Wyniki pomiarów rezystancji szeregowo i równolegle zgadzają się z wartościami teoretycznymi\\
+
+Szeregowo:
+
+\begin{center}
+    \begin{tabular}{ c | c | c }
+    Rezystor & $R_x$ [\si{\ohm}] & Wartość teoretyczna [\si{\ohm}]\\
+    \hline
+     2 i 4  & 2720,00 $\pm$ 10,88& 2683,24\\ 
+     2 i 5  & 3780, 00 $\pm$ 15,12 & 3689,40\\ 
+     4 i 5  & 5163,60 $\pm$ 20,66&  5103,51\\ 
+    \end{tabular}
+\end{center}
+
+Równolegle:
+
+\begin{center}
+    \begin{tabular}{ c | c | c}
+    Rezystor & $R_x$ [\si{\ohm}] & Wartość teoretyczna [\si{\ohm}]\\
+    \hline
+    2 i 4    & 495,00 $\pm$ 1,98 & 485,76\\ 
+    2 i 5  & 540,00 $\pm$ 2,16 & 525,75\\ 
+    4 i 5    & 1254,97 $\pm$ 5,02 &  1226,03\\ 
+    
+    \end{tabular}
+\end{center}
+
+Wyniki pomiarów rezystancji drutów są zbliżone do wartości teoretycznych. Różnice między wartościami mogły być spowodowane niedokładnością pomiaru długości drutu oraz nie wzięciem pod uwagi temperatury.\\\\
+Opór właściwy konstantanu wynosi $\rho$ = $0.5*10^{-6} \si{\ohm}m$
+
+\begin{center}
+    \begin{tabular}{ c|c | c|c }
+    $d$ [mm] & $\frac{1}{d^2}$ [mm$^{-2}]$ &$R_x$ [\si{\ohm}] & Wartość teoretyczna [\si{\ohm}]\\
+    \hline
+    0,35 & 8,16 & 5,06$\pm$ 0,02 & 4,08\\ 
+     0,50 & 4,00 &2,39 $\pm$ 0,01 & 2,00\\ 
+     0,70 & 2,04 &1,21 $\pm$ 0,01 & 1,02\\ 
+     1,00 & 1,00 &0,57 $\pm$ 0,01 & 0,50\\ 
+     
+    \end{tabular}
+\end{center}
 
 \end{document}
