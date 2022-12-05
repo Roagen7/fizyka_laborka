@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{green},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\graphicspath{ {./media/} }
+
+\begin{document}
+
+
+\section{Użyte wzory}
+
+\subsection{Wyniki}
+Przy pierwszych pomiarach (zmienianie prądu płynącego w ramce) chcąc wyznaczyć 
+wartość indukcji pola magnetycznego B posłużymy się wzorem:
+\begin{gather*}
+	F = ILB \\
+	(m-m_0)g = ILB \\
+	m(I) = \frac{LB}{g}I + m_0
+\end{gather*} 
+gdzie $m_0$ - masa samej ramki,\\
+$m$ - masa pozorna ramki przy płynącym przez nią prądzie I \\
+$L=0,1$ m\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieE5.pdf}} - długość odcinka przewodnika oddziałującego z polem magnetycznym. \\
+Korzystając z metody najmniejszych kwadratów otrzymamy wspł.  kierunkowy prostej
+\begin{gather*}
+	a = \frac{LB}{g} \rightarrow B = \frac{ag}{L}
+\end{gather*}
+W następym pomiarze (zmiana prądu płynącego przez uzwojenie elektromagnesu) skorzystamy z zależności
+\begin{gather*}
+	B = \frac{(m-m_0)g}{IL}
+\end{gather*}
+przy określeniu zależności $B(I_m)$, gdzie $I_m$ - natężenie prądu w uzwojeniu elektromagnesu.
+
+\subsection{Niepewności}
+Niepewność indukcji pola magnetycznego wyznaczonego metodą najmniejszych kwadratów wyznaczymy z odpowiednich wzorów  \footnote{\url{https://ftims.pg.edu.pl/documents/10673/20436990/wstep.pdf}}\:
+
+\begin{gather*}
+		u_a = \sqrt{\frac{n}{n-2} * \frac{\Sigma y_i^2 - a\Sigma x_iy_i}{n\Sigma x_i^2}} 
+\end{gather*}
+skąd
+\begin{gather*}
+		u_B= |\frac{\partial B}{\partial a}| u_a = \frac{g}{L}u_a
+\end{gather*}
+W przypadku zależności $B(I_m)$ niepewność B wyznaczamy jako niepewność funkcji złożonej zmiennych 
+$m, m_0, I$:
+
+\begin{gather*}
+		\Delta B = |\frac{\partial B}{\partial m_0}|\Delta m_0 + |\frac{\partial B}{\partial m}|\Delta m + |\frac{\partial B}{\partial I}|\Delta I = \frac{g}{IL}(\Delta m + \Delta m_0 + \frac{m-m_0}{I}\Delta I)
+\end{gather*}
+gdzie $\Delta m_0 =\Delta m = 0,01$ g oraz $\Delta I = 0,02$ A. (to jeszcze do sprawdzenia czy takie niepewności były)
+
+
+\end{document}
