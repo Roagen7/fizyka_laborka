@@ -35,8 +35,8 @@ if __name__ == '__main__':
     for cap in caps:
         cap.set_markeredgewidth(1)
 
-    plt.ylabel('F [N]') #zmienić todo
-    plt.xlabel('I [V]') #zmienić todo
+    plt.ylabel('F [N] * 10^-3') #zmienić todo
+    plt.xlabel('I [A]') #zmienić todo
 
     print("a=", coeff)
     print("stdev=", dev)
