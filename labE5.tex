@@ -33,17 +33,100 @@
 \begin{document}
 
 \section{Cel ćwiczenia}
-Celem ćwiczenia jest pomiar siły elektrodynamicznej (przy pomocy wagi) działającej na odcinek przewodnika z prądem, który został umieszczony w jednorodnym polu magnetycznym. Badana jest zależność tej siły od natężenia prądu płynącego w przewodniku i od indukcji pola magnetycznego. Na podstawie przeprowadzonych pomiarów wyznaczana jest wartość indukcji pola magnetycznego
+Celem ćwiczenia jest pomiar siły elektrodynamicznej (przy pomocy wagi) działającej na odcinek przewodnika z prądem, który został umieszczony w jednorodnym polu magnetycznym. Zbadana została zależność tej siły od natężenia prądu płynącego w przewodniku oraz od natężenia prądu płynącego w uzwojeniu. Pomiary przeprowadzone zostały przy użyciu następującego układu \footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieE5.pdf}}:
+\begin{center}
+\includegraphics[width=10cm]{aaa}
+\end{center}
+\section{Użyte wzory}
 
-\section{Wyznaczanie siły działającej na fragment przewodnika}
-\subsection{pomierzone dane}
+\subsection{Zmiana prądu w ramce}
+Przy pierwszych pomiarach (zmienianie prądu płynącego w ramce) chcąc wyznaczyć 
+wartość indukcji pola magnetycznego B posłużymy się wzorami:
+\begin{gather*}
+	F = (m-m_0)g \\
+	F(I) = LB \cdot I
+\end{gather*} 
+gdzie \\ $m_0$ - masa samej ramki,\\
+$m$ - masa pozorna ramki przy płynącym przez nią prądzie I \\
+$L=0,1$ m\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieE5.pdf}} - długość odcinka przewodnika oddziałującego z polem magnetycznym. \\
+Korzystając z metody najmniejszych kwadratów otrzymamy wartość wspł.  kierunkowego prostej
+\begin{gather*}
+	a = LB \rightarrow B = \frac{a}{L}
+\end{gather*}
 
-$U$ = 12 V
+\subsection{Zmiana prądu w uzwojeniu}
+W następym pomiarze (zmiana prądu płynącego przez uzwojenie elektromagnesu) skorzystamy z zależności
+\begin{gather*}
+	B = \frac{(m-m_0)g}{IL}
+\end{gather*}
+przy określeniu zależności $B(I_m)$, gdzie $I_m$ - natężenie prądu w uzwojeniu elektromagnes natomiast $I$ = 4A - stałe natężenie prądu w przewodniku.
+
+\section{Wzory do wyliczenia niepewności}
+Przyjmujemy $\Delta m = 0,01$ dla każdego pomiaru masy.
+
+\subsection{Zmiana prądu w ramce}
+Niepewność siły elektrodynamicznej wyznaczamy jako niepewność wielkości złożonej ze wzoru:\\
+\begin{gather*}
+		\Delta F= |\frac{\partial F}{\partial m}| \Delta m + |\frac{\partial F}{\partial m_0}| \Delta m_0  = (\frac{(m - m_0)g }{m} + \frac{(m - m_0)g }{m_0}) \Delta m
+\end{gather*}
+gdzie $\Delta m_0 =\Delta m = 0,01$ g.
+\\Niepewność indukcji pola magnetycznego wyznaczonego metodą najmniejszych kwadratów obliczamy z odpowiednich wzorów  \footnote{\url{https://ftims.pg.edu.pl/documents/10673/20436990/wstep.pdf}}\:
+
+\begin{gather*}
+		u_a = \sqrt{\frac{n}{n-2} * \frac{\Sigma y_i^2 - a\Sigma x_iy_i}{n\Sigma x_i^2}} 
+\end{gather*}
+skąd
+\begin{gather*}
+		u_B= |\frac{\partial B}{\partial a}| u_a = \frac{1}{L}u_a
+\end{gather*}
+
+\subsection{Zmiana prądu w uzwojeniu}
+W przypadku zależności $B(I_m)$ niepewność B wyznaczamy jako niepewność funkcji złożonej zmiennych 
+$m, m_0, I$:
+
+\begin{gather*}
+		\Delta B = |\frac{\partial B}{\partial m_0}|\Delta m_0 + |\frac{\partial B}{\partial m}|\Delta m + |\frac{\partial B}{\partial I}|\Delta I = \frac{g}{IL}(\Delta m + \Delta m_0 + \frac{m-m_0}{I}\Delta I)
+\end{gather*}
+gdzie I - natężenie prądu w ramce (!)  oraz $\Delta I = 0,02$ A.
+
+
+
+\section{Pomierzone dane}
+
+\subsection{Zmiana prądu w ramce dla stałego U $=$ 6 V  w uzwojeniu}
 \begin{center}
 \begin{tabular}{ c | c | c}
-I [A] & m [g] & F [N] * $10^{-3}$\\
+I [A] & m [g] & F [mN]\\
 \hline
-0,5 & 38,19 & 8,93 $\pm$ 0,00\\
+0,5 & 37,61  & 3,24 $\pm$ 0,01\\
+1,0 & 38,01  & 7,16 $\pm$ 0,01\\
+1,5 & 38,38  & 10,80 $\pm$ 0,01\\
+2,0 & 38,77  & 14,62 $\pm$ 0,01\\
+2,5 & 39,14  & 18,26 $\pm$ 0,01\\
+3,0 & 39,52  & 21,99 $\pm$ 0,01\\
+3,5 & 39,98  & 26,50 $\pm$ 0,01\\
+4,0 & 40,31  & 29,74 $\pm$ 0,02\\
+4,5 & 40,74  & 33,96 $\pm$ 0,02\\
+5,0 & 41,11  & 37,59 $\pm$ 0,02\\
+\end{tabular}
+\end{center}
+$I$ - prąd płynądy przez ramkę \\
+$m$ - masa pozorna ramki przy płynącym przez nią prądzie I \\
+$F$ - siła elektrodynamiczna działająca na przewodnik obliczona przy użyciu wyżej wymienionego wzoru\\
+$m_0$ = 37,28 g - masa ramki \\
+$g$ $\approx$ 9,815 [$\frac{m}{s^2}$] - przyspiespieszenie ziemskie przyjęte dla Gdańska
+
+\subsection{Wyznaczenie B dla U $=$ 6 V}
+\includegraphics[width=10cm]{CHUJ}
+\\otrzymujemy a = 7,65 [$\frac{mN}{A}$] $\rightarrow$ B = 76,50 $\pm$ 4,11 [mT]
+
+\subsection{Zmiana prądu w ramce dla stałego U $=$ 12 V w uzwojeniu}
+
+\begin{center}
+\begin{tabular}{ c | c | c}
+I [A] & m [g] & F [mN]\\
+\hline
+0,5 & 38,19 & 8,93 $\pm$ 0,01\\
 1,0 & 39,08 & 17,67 $\pm$ 0,01\\
 1,5 & 39,96 & 26,30 $\pm$ 0,01\\
 2,0 & 40,85 & 35,04 $\pm$ 0,02\\
@@ -55,48 +138,21 @@ I [A] & m [g] & F [N] * $10^{-3}$\\
 5,0 & 46,39 & 89,41 $\pm$ 0,04\\
 \end{tabular}
 \end{center}
+oznaczenia jak powyżej
 
-$U$ = 6 V
-\begin{center}
-\begin{tabular}{ c | c | c}
-I [A] & m [g] & F [N]* $10^{-3}$\\
-\hline
-0,5 & 37,61  & 3,24 $\pm$ 0,00\\
-1,0 & 38,01  & 7,16 $\pm$ 0,00\\
-1,5 & 38,38  & 10,80 $\pm$ 0,01\\
-2,0 & 38,77  & 14,62 $\pm$ 0,01\\
-2,5 & 39,14  & 18,26 $\pm$ 0,01\\
-3,0 & 39,52  & 21,99 $\pm$ 0,01\\
-3,5 & 39,98  & 26,50 $\pm$ 0,01\\
-4,0 & 40,31  & 29,74 $\pm$ 0,02\\
-4,5 & 40,74  & 33,96 $\pm$ 0,02\\
-5,0 & 41,11  & 37,59 $\pm$ 0,02\\
-\end{tabular}
-\end{center}
+\subsection{Wyznaczenie B dla U $=$ 12 V}
 
-$I$ - prąd płynądy przez ramkę \\
-$m$ - masa pozorna ramki przy płynącym przez nią prądzie I \\\\
-$m_0$ - masa ramki = 37,28 g\\
-$g$ - przyspiespieszenie ziemskie przyjęte dla Gdańska $\approx$ 9,815 [$\frac{m}{s^2}$]
-
-\subsection{wykres zależnoci F= f(I)}
-$U$ =12 V\\
 
 \includegraphics[width=10cm]{F(I)_12V}
 
-$U$ = 6 V\\
-\includegraphics[width=10cm]{F(I)_6V}
-\subsection{Niepewności}
-Niepewność siły elektrodynamicznej wyznaczamy jako niepewność wielkości złożonej ze wzoru:\\
-\begin{gather*}
-		\Delta F= |\frac{\partial F}{\partial m}| \Delta m + |\frac{\partial F}{\partial m_0}| \Delta m_0  = (\frac{(m - m_0)g }{m} + \frac{(m - m_0)g }{m_0}) \Delta m
-\end{gather*}
-gdzie $\Delta m_0 =\Delta m = 0,01$ g
-\section{Określenie zależności indukcji magnetycznej elektromagnesu}
+
+
+
+\subsection{Zmiana prądu w uzwojeniu dla stałego I $=$ 4A w ramce }
 
 \begin{center}
   \begin{tabular}{ c | c | c | c}
-  U [V] & I [A] & m [g] & B [T] * $10^{-3}$\\
+  U [V] & I$_m$ [A] & m [g] & B [mT]\\
   \hline
   2 & 0,04 & 37,67 & 956,96 $\pm$ 0,22\\
   4 & 0,2 & 38,96 & 824,46 $\pm$ 0,19\\
@@ -106,57 +162,33 @@ gdzie $\Delta m_0 =\Delta m = 0,01$ g
   12 & 0,86 & 44,52 & 826,29 $\pm$ 0,19\\
   \end{tabular}
 \end{center}
-
-$I$ - natężenie prądu w uzwojeniu elektromagnesu \\
+$I_m$ - natężenie prądu w uzwojeniu elektromagnesu \\
 $m$ - masa pozorna ramki przy płynącym przez nią prądzie I \\\\
 $m_0$ - masa ramki = 37,28 g\\
-$g$ - przyspiespieszenie ziemskie przyjęte dla Gdańska $\approx$ 9,815 [$\frac{m}{s^2}$]
+$g$ - przyspiespieszenie ziemskie przyjęte dla Gdańska $\approx$ 9,815 [$\frac{m}{s^2}$] \\
+$B$ - indukcja pola magnetycznego policzona z wyżej wymienionego wzoru \\
 
-\subsection{Niepewności}
-Niepewność indukcji pola magnetycznego wyznaczonego metodą najmniejszych kwadratów wyznaczymy z odpowiednich wzorów  \footnote{\url{https://ftims.pg.edu.pl/documents/10673/20436990/wstep.pdf}}\:
+\subsection{Zależność B(I$_m$)}
 
-\begin{gather*}
-		u_a = \sqrt{\frac{n}{n-2} * \frac{\Sigma y_i^2 - a\Sigma x_iy_i}{n\Sigma x_i^2}} 
-\end{gather*}
-skąd
-\begin{gather*}
-		u_B= |\frac{\partial B}{\partial a}| u_a = \frac{g}{L}u_a
-\end{gather*}
-W przypadku zależności $B(I_m)$ niepewność B wyznaczamy jako niepewność funkcji złożonej zmiennych 
-$m, m_0, I$:
 
-\begin{gather*}
-		\Delta B = |\frac{\partial B}{\partial m_0}|\Delta m_0 + |\frac{\partial B}{\partial m}|\Delta m + |\frac{\partial B}{\partial I}|\Delta I = \frac{g}{IL}(\Delta m + \Delta m_0 + \frac{m-m_0}{I}\Delta I)
-\end{gather*}
-gdzie $\Delta m_0 =\Delta m = 0,01$ g oraz $\Delta I = 0,02$ A.
+\section{Wnioski}
 
-\section{Wartość indukcji magnetycznej w szczelinie elektomagnesu}
+\begin{center}
+\begin{tabular}{c | c}
+U[V] & B[mT] \\
+\hline
+6 & 76,50 $\pm$ 4,11 \\
+12 & 1
+\end{tabular}
+\end{center}
+Zgodnie z oczekiwaniami teoretycznymi,  w pierwszych dwóch pomiarach zależność $F(I)$ jest liniowa, 
+a współczynnik kierunkowy jest większy wraz ze wzrostem napięcia (a co za tym idzie natężenia) na uzwojeniu elektromagnesu.
 
-a, b = 1.83 37.21
-(wyszlo w 1 przykladzie a = 1.82 więc się zgadza)
+TUTAJ JESZCZE O POMIARZE TRZECIM
 
-\section{Użyte wzory}
-
-\subsection{Wyniki}
-Przy pierwszych pomiarach (zmienianie prądu płynącego w ramce) chcąc wyznaczyć 
-wartość indukcji pola magnetycznego B posłużymy się wzorem:
-\begin{gather*}
-	F = ILB \\
-	(m-m_0)g = ILB \\
-	m(I) = \frac{LB}{g}I + m_0
-\end{gather*} 
-gdzie $m_0$ - masa samej ramki,\\
-$m$ - masa pozorna ramki przy płynącym przez nią prądzie I \\
-$L=0,1$ m\footnote{\url{https://pg.edu.pl/files/ftims/2021-03/cwiczenieE5.pdf}} - długość odcinka przewodnika oddziałującego z polem magnetycznym. \\
-Korzystając z metody najmniejszych kwadratów otrzymamy wspł.  kierunkowy prostej
-\begin{gather*}
-	a = \frac{LB}{g} \rightarrow B = \frac{ag}{L}
-\end{gather*}
-W następym pomiarze (zmiana prądu płynącego przez uzwojenie elektromagnesu) skorzystamy z zależności
-\begin{gather*}
-	B = \frac{(m-m_0)g}{IL}
-\end{gather*}
-przy określeniu zależności $B(I_m)$, gdzie $I_m$ - natężenie prądu w uzwojeniu elektromagnesu.
+We wszystkich pomiarach głównym czynnikiem wpływającym na niepewności był błąd związany z oscylacją wagi, przez co trudniej stwierdzić było, czy osiągnięto położenie równowagi.
+Istotny wpływ na odczyt mógł mieć również błąd paralaksy. Ponadto, amperomierz jest najdokładniejszy w środkowej części mierzonego zakresu, przez co pomiary 
+wartości skrajnych mogły być obarczone dodatkowymi niedokładnościami.
 
 
 
