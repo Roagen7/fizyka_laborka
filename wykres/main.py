@@ -22,10 +22,10 @@ def stdev(a, x, y): #stdev = S_a
 if __name__ == '__main__':
    # matplotlib.use('Windows')
 
-    error = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.02]
+    error = [0.54, 0.7, 0.86, 1.03, 1.20, 1.38]
     error_x = [0.02 for x in range(len(error))]
-    x = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
-    y = [3.24, 7.16, 10.80, 14.62, 18.26, 21.99, 26.50, 29.74, 33.96, 37.59]
+    x = [0.04, 0.2, 0.36, 0.53, 0.7, 0.86]
+    y = [9.56, 41.20, 73.33, 107.91, 142.98, 177.56]
 
     coeff = np.polyfit(x,y,1)
     dev = stdev(coeff[0], x, y)
@@ -36,8 +36,8 @@ if __name__ == '__main__':
     for cap in caps:
         cap.set_markeredgewidth(1)
 
-    plt.ylabel('F [mN]')
-    plt.xlabel('I [A]')
+    plt.ylabel('B [mT]')
+    plt.xlabel('Im [A]')
 
     print("a=", coeff)
     print("stdev=", dev)
