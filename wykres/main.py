@@ -20,11 +20,11 @@ def stdev(a, x, y): #stdev = S_a
 
 
 if __name__ == '__main__':
-    matplotlib.use('MacOSX')
+   # matplotlib.use('Windows')
 
-    error = [0.02, 0.01, 0.01, 0.01]
-    x = [1.0, 2.04, 4.0, 8.16]
-    y = [0.57, 1.21, 2.39, 5.06]
+    error = [0.00, 0.00, 0.01, 0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.02] #zmienić todo
+    x = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]#zmienić todo
+    y = [3.24, 7.16, 10.80, 14.62, 18.26, 21.99, 26.50, 29.74, 33.96, 37.59]#zmienić todo
 
     coeff = np.polyfit(x,y,1)
     dev = stdev(coeff[0], x, y)
@@ -35,8 +35,8 @@ if __name__ == '__main__':
     for cap in caps:
         cap.set_markeredgewidth(1)
 
-    plt.ylabel('Rx [Ω]')
-    plt.xlabel('d^(-2) [mm^-2]')
+    plt.ylabel('F [N]') #zmienić todo
+    plt.xlabel('I [V]') #zmienić todo
 
     print("a=", coeff)
     print("stdev=", dev)
